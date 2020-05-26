@@ -1,0 +1,21 @@
+/* Project: Easy Relay Timer
+   Author: Johan Sebastian 
+   Editor: Abin Gigo Joseph */
+
+#include <math.h>
+
+int pinOut = 10; //Relay pin SIG connected to digital pin 10 on the arduino uno
+
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(10, OUTPUT);
+}
+
+void loop() {             
+  int val;                
+    digitalWrite(pinOut, HIGH);
+  delay(600000);               //runs for 10 minutes
+    digitalWrite(pinOut, LOW);
+  delay(3000000);              //runs for 50 minutes     
+}
